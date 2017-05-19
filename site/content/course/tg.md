@@ -1,10 +1,12 @@
 ---
 title: tg
 dayofweek: Mittwoch
-starttime: '435'
-endtime: rgeg
+starttime: '08:00'
+endtime: '10:00'
 dates:
-  - ergerg
+  - '01.01'
+  - '10.01'
+  - '20.01'
 ---
 
 geger
