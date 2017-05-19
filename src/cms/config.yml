@@ -23,8 +23,9 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Wochentag", name: "dayofweek", widget: "select", options: ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag']}
+      - {label: "Wochentag", name: "dayofweek", widget: "select", options: ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']}
       - {label: "Startzeit", name: "starttime", widget: "string"}
+      - {label: "Ort", name: "location", widget: "string"}
       - {label: "Endzeit", name: "endtime", widget: "string"}
       - {label: "Termine", name: dates, widget: list}
       - {label: "Kursbeschreibung", name: "body", widget: "markdown"}

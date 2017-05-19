@@ -2,8 +2,8 @@
 
 	<h2 class="f3 b lh-title mb1 primary">{{ .Title }}</h2
     >
-	<p class="mid-gray lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-	<p class="mb0">{{ .Description }}</p>
+	<p>{{ .Params.dayofweek }} {{ .Params.starttime }} - {{ .Params.endtime }} </p>
+
 	<p class="link b dib black mb0">Read more →</p>
 
 </a>
