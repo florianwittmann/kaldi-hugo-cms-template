@@ -7,7 +7,7 @@ export default class CoursePreview extends React.Component {
 
     return <div className="mw6 center ph3 pv4">
       <h1 className="f2 lh-title b mb3">{ entry.getIn(["data", "title"])}</h1>
-    <b>{ entry.getIn(["data", "dayofweek"])}</b> { entry.getIn(["data", "starttime"])}
+    <b>{ entry.getIn(["data", "dayofweek"])}</b> { entry.getIn(["data", "starttime"])} - { entry.getIn(["data", "endtime"])}
       <div className="cms mw6">
         { widgetFor("body") }
       </div>

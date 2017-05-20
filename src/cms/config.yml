@@ -18,15 +18,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "kurs" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Yogakurs" # Used in the UI, ie.: "New Post"
+    label: "Kurs" # Used in the UI, ie.: "New Post"
     folder: "site/content/course" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Wochentag", name: "dayofweek", widget: "select", options: ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']}
-      - {label: "Startzeit", name: "starttime", widget: "string"}
+      - {label: "Startzeit", name: "starttime", widget: "string", pattern: ["^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$", "Bitte eine gültige Zeit eingeben: z.B. 18:00 (hh:mm)"]}
+      - {label: "Endzeit", name: "endtime", widget: "string", pattern: ["^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$", "Bitte eine gültige Zeit eingeben: z.B. 18:00 (hh:mm)"]}
       - {label: "Ort", name: "location", widget: "string"}
-      - {label: "Endzeit", name: "endtime", widget: "string"}
       - {label: "Termine", name: dates, widget: list}
       - {label: "Kursbeschreibung", name: "body", widget: "markdown"}
   - name: "pages"
@@ -47,3 +47,13 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+      - file: "site/content/zertifizierung-krankenkasse.md"
+        label: "Zertifizierung-Krankenkasse"
+        name: "zert"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Type, name: type, widget: hidden, default: products}
+          - {label: Page, name: page, widget: hidden, default: "/zertifizierung.html"}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: markdown}
